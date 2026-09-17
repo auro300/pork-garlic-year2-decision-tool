@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Team 3 Year 2 winter decision tool for the Pork and Garlic Ice Cream business simulation." />
+    <title>Team 3 Year 2 Decision Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <div>
+          <p class="eyebrow">Pork &amp; Garlic Ice Cream Co. · Team 3</p>
+          <h1>Year 2 winter decision tool</h1>
+          <p class="hero__copy">Compare two strategies, test the trainer's sales allocation, and protect cash before committing.</p>
+        </div>
+        <div class="hero__actions">
+          <button class="button button--ghost" id="resetButton" type="button">Reset estimates</button>
+          <button class="button button--light" id="printButton" type="button">Print / save PDF</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="notice" aria-labelledby="estimate-title">
+        <div class="notice__icon">!</div>
+        <div>
+          <h2 id="estimate-title">Year 2 prices are estimates</h2>
+          <p>The trainer has not confirmed the new Year 2 premises, machines, or prices. Replace the orange-tagged estimates when the new rules arrive. The Year 2 winter forecast of <strong>410,000 units</strong> is known, but it is not guaranteed sales.</p>
+        </div>
+      </section>
+
+      <nav class="section-nav" aria-label="Page sections">
+        <a href="#opening">Opening position</a>
+        <a href="#assumptions">Rule estimates</a>
+        <a href="#options">Strategy comparison</a>
+        <a href="#validation">Year 1 check</a>
+      </nav>
+
+      <section class="panel" id="opening">
+        <div class="section-heading">
+          <div>
+            <p class="section-number">01</p>
+            <h2>Real position after Year 1 autumn</h2>
+          </div>
+          <span class="status status--action">Complete with your model</span>
+        </div>
+        <p class="section-intro">These values feed both Year 2 options. Enter the exact closing balances from your classroom model before submission.</p>
+
+        <div class="input-grid input-grid--4">
+          <label class="field">
+            <span>Opening cash <em>Sh</em></span>
+            <input id="openingCash" type="number" step="1" min="0" />
+          </label>
+          <label class="field">
+            <span>Year 1 annual profit <em>Sh</em></span>
+            <input id="year1Profit" type="number" step="1" />
+          </label>
+          <label class="field">
+            <span>Unused tax-loss pool <em>Sh</em></span>
+            <input id="openingTaxLoss" type="number" step="1" min="0" />
+          </label>
+          <label class="field field--readonly">
+            <span>Year 2 winter forecast</span>
+            <input value="410,000 units" readonly />
+          </label>
+        </div>
+
+        <h3>Owned machines</h3>
+        <div class="table-wrap">
+          <table class="data-table" id="ownedMachinesTable">
+            <thead><tr><th>Type</th><th>Owned copies</th><th>Remaining life</th><th>Seasonal depreciation</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <h3>Unpaid loans</h3>
+        <p class="helper">Enter each balance before the Year 2 winter payment. Interest is charged on that opening balance.</p>
+        <div class="table-wrap">
+          <table class="data-table" id="loansTable">
+            <thead><tr><th>Loan</th><th>Outstanding principal</th><th>Principal due this season</th><th>Interest rate</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <details class="panel assumptions" id="assumptions">
+        <summary>
+          <span><span class="section-number">02</span> Rule and price estimates</span>
+          <span class="estimate-chip">Editable Year 1 values</span>
+        </summary>
+        <p class="section-intro">These defaults come from Year 1 only. Update every changed value when the trainer releases Year 2 rules.</p>
+
+        <div class="input-grid input-grid--4 compact-fields">
+          <label class="field"><span>Sale price <em>Sh/unit</em></span><input id="salePrice" type="number" min="0" step="0.01" /></label>
+          <label class="field"><span>Milk price <em>Sh/ton</em></span><input id="milkPrice" type="number" min="0" step="1" /></label>
+          <label class="field"><span>Milk yield <em>units/ton</em></span><input id="milkYield" type="number" min="1" step="1" /></label>
+          <label class="field"><span>Fixed salaries <em>Sh</em></span><input id="salary" type="number" min="0" step="1" /></label>
+          <label class="field"><span>Bonus <em>% gross profit</em></span><input id="bonusRate" type="number" min="0" step="0.1" /></label>
+          <label class="field"><span>Tax rate <em>%</em></span><input id="taxRate" type="number" min="0" step="0.1" /></label>
+          <label class="field"><span>Minimum milk <em>tons</em></span><input id="minimumMilk" type="number" min="0" step="0.1" /></label>
+          <label class="field"><span>Minimum market spend <em>Sh</em></span><input id="minimumMarket" type="number" min="0" step="1" /></label>
+        </div>
+
+        <h3>Premises estimates</h3>
+        <div class="table-wrap">
+          <table class="data-table" id="premiseRulesTable">
+            <thead><tr><th>Premise</th><th>Machine slots</th><th>Transport Sh/unit</th><th>Rent Sh/season</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <h3>Machine estimates</h3>
+        <div class="table-wrap">
+          <table class="data-table" id="machineRulesTable">
+            <thead><tr><th>Machine</th><th>Capacity</th><th>Purchase price</th><th>Maintenance</th><th>Depreciation</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+
+      <section id="options">
+        <div class="section-heading standalone-heading">
+          <div>
+            <p class="section-number">03</p>
+            <h2>Compare Year 2 winter strategies</h2>
+          </div>
+          <span class="status">Forecast 410,000</span>
+        </div>
+        <p class="section-intro">Change the possible actual allocation first. It is the strongest stress test because revenue depends on units sold, not requested.</p>
+
+        <div class="scenario-grid">
+          <article class="scenario panel" data-scenario="a">
+            <div class="scenario__header">
+              <label class="scenario-name"><span>Option A</span><input id="a_name" type="text" /></label>
+              <span class="recommend-badge">Recommended</span>
+            </div>
+            <div class="scenario-inputs"></div>
+            <div class="scenario-results"></div>
+          </article>
+
+          <article class="scenario panel" data-scenario="b">
+            <div class="scenario__header">
+              <label class="scenario-name"><span>Option B</span><input id="b_name" type="text" /></label>
+              <span class="risk-badge">Higher risk</span>
+            </div>
+            <div class="scenario-inputs"></div>
+            <div class="scenario-results"></div>
+          </article>
+        </div>
+
+        <article class="panel comparison-panel">
+          <div class="section-heading section-heading--small">
+            <div><h2>Decision summary</h2></div>
+            <span id="preferredOption" class="status status--good">Option A leads</span>
+          </div>
+          <div id="comparisonText" class="comparison-copy"></div>
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead><tr><th>Measure</th><th id="compareNameA">Option A</th><th id="compareNameB">Option B</th><th>Difference A − B</th></tr></thead>
+              <tbody id="comparisonBody"></tbody>
+            </table>
+          </div>
+          <div class="recommendation">
+            <h3>Recommendation for class</h3>
+            <p id="recommendationText"></p>
+            <p><strong>Most important assumption:</strong> <span id="assumptionText"></span></p>
+            <p><strong>If allocation is lower:</strong> <span id="downsideText"></span></p>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel" id="validation">
+        <div class="section-heading">
+          <div>
+            <p class="section-number">04</p>
+            <h2>Real Year 1 season validation</h2>
+          </div>
+          <span class="status status--good">Matches Team 3 winter</span>
+        </div>
+        <p class="section-intro">Known classroom result: Premise F, three Machine 2 units, 17 tons of milk, 330,000 requested, 280,000 sold, Sh 7,000 market spend, and a Sh 532,000 eight-season loan.</p>
+        <div class="validation-grid">
+          <div><span>Revenue</span><strong>Sh 560,000</strong></div>
+          <div><span>Profit before tax</span><strong>Sh 24,691</strong></div>
+          <div><span>Net profit</span><strong>Sh 22,222</strong></div>
+          <div><span>Closing cash</span><strong>Sh 338,347</strong></div>
+        </div>
+        <p class="validation-note">This check uses the Year 1 posting rule: round each line to the nearest whole shekel, then build subtotals from the rounded lines.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built for Team 3 · Values are virtual shekels · Saved automatically in this browser</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
