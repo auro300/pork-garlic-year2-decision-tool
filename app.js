@@ -20,8 +20,8 @@ const premiseDefaults = [
 
 const initialState = {
   global: {
-    openingCash: 0,
-    year1Profit: 0,
+    openingCash: 73546,
+    year1Profit: 4171,
     openingTaxLoss: 0,
     salePrice: 2,
     milkPrice: 20000,
@@ -32,27 +32,27 @@ const initialState = {
     minimumMilk: 1,
     minimumMarket: 1000,
   },
-  machines: machineDefaults.map(m => ({ ...m, owned: m.id === 2 ? 3 : 0, life: m.id === 2 ? 4 : 0 })),
+  machines: machineDefaults.map(m => ({ ...m, owned: m.id === 1 ? 1 : 0, life: m.id === 1 ? 7 : 0 })),
   premises: premiseDefaults.map(p => ({ ...p })),
   loans: [
-    { balance: 266000, principalDue: 66500, rate: 10 },
+    { balance: 0, principalDue: 0, rate: 10 },
     { balance: 0, principalDue: 0, rate: 10 },
     { balance: 0, principalDue: 0, rate: 10 },
   ],
   scenarios: {
     a: {
-      name: "Cash-protected plan", milkTons: 18, plannedProduction: 360000, salesRequest: 360000,
-      marketInvestment: 7000, actualSales: 330000, newLoan: 0, loanTerm: 4,
-      premises: { A: 0, B: 0, C: 0, D: 0, E: 0, F: 360000 },
-      machineUse: { 1: 0, 2: 3, 3: 0, 4: 0, 5: 0, 6: 0 },
+      name: "Balanced plan", milkTons: 2.5, plannedProduction: 50000, salesRequest: 50000,
+      marketInvestment: 5000, actualSales: 45000, newLoan: 0, loanRate: 10, loanTerm: 4,
+      premises: { A: 0, B: 0, C: 0, D: 50000, E: 0, F: 0 },
+      machineUse: { 1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
       machineBuy: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
     },
     b: {
-      name: "Maximum-sales push", milkTons: 21, plannedProduction: 410000, salesRequest: 410000,
-      marketInvestment: 10000, actualSales: 360000, newLoan: 150000, loanTerm: 8,
-      premises: { A: 0, B: 0, C: 0, D: 50000, E: 0, F: 360000 },
-      machineUse: { 1: 1, 2: 3, 3: 0, 4: 0, 5: 0, 6: 0 },
-      machineBuy: { 1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+      name: "Growth plan", milkTons: 3.5, plannedProduction: 70000, salesRequest: 70000,
+      marketInvestment: 9000, actualSales: 55000, newLoan: 30000, loanRate: 10, loanTerm: 4,
+      premises: { A: 0, B: 0, C: 0, D: 0, E: 70000, F: 0 },
+      machineUse: { 1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+      machineBuy: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
     },
   },
 };
@@ -68,7 +68,7 @@ function signed(value) { const n = round(value); return `${n >= 0 ? "+" : "−"}
 
 function loadState() {
   try {
-    const saved = JSON.parse(localStorage.getItem("team3-y2-tool"));
+    const saved = JSON.parse(localStorage.getItem("team3-y2-tool-v2"));
     if (!saved) return deepClone(initialState);
     return mergeDeep(deepClone(initialState), saved);
   } catch { return deepClone(initialState); }
@@ -84,7 +84,7 @@ function mergeDeep(target, source) {
   return target;
 }
 
-function saveState() { localStorage.setItem("team3-y2-tool", JSON.stringify(state)); }
+function saveState() { localStorage.setItem("team3-y2-tool-v2", JSON.stringify(state)); }
 
 function input(value, attrs = "") { return `<input type="number" value="${value}" ${attrs}>`; }
 
@@ -128,6 +128,7 @@ function renderScenarioInputs(key) {
         ${scenarioField(key, "marketInvestment", "Market investment", "Sh")}
         ${scenarioField(key, "actualSales", "Possible actual sales", "units", 10000)}
         ${scenarioField(key, "newLoan", "New borrowing", "Sh")}
+        ${scenarioField(key, "loanRate", "New loan interest", "%", 0.1)}
         ${scenarioField(key, "loanTerm", "New loan term", "seasons", 1, 1, 8)}
       </div>
     </div>
@@ -218,7 +219,7 @@ function calculate(key) {
   const bonus = round(Math.max(0, grossProfit) * num(g.bonusRate) / 100);
   const existingInterest = round(state.loans.reduce((sum, l) => sum + num(l.balance) * num(l.rate) / 100, 0));
   const existingPrincipal = round(state.loans.reduce((sum, l) => sum + Math.min(num(l.balance), num(l.principalDue)), 0));
-  const newInterest = round(num(s.newLoan) * 0.10);
+  const newInterest = round(num(s.newLoan) * num(s.loanRate) / 100);
   const newPrincipal = round(num(s.newLoan) / Math.max(1, num(s.loanTerm)));
   const interest = existingInterest + newInterest;
   const principal = existingPrincipal + newPrincipal;
@@ -236,7 +237,7 @@ function calculate(key) {
   const unusedMilkCapacity = Math.max(0, milkCapacity - production);
 
   const warnings = [];
-  if (advanceCash < 0) warnings.push(`Cash before advance payment is negative by ${fmt(Math.abs(advanceCash))}.`);
+  if (advanceCash < 0) warnings.push(`Cash before the sales allocation payment is negative by ${fmt(Math.abs(advanceCash))}.`);
   if (closingCash < 0) warnings.push(`Season-end cash is negative by ${fmt(Math.abs(closingCash))}.`);
   if (num(s.milkTons) < num(g.minimumMilk)) warnings.push(`Milk is below the estimated minimum of ${g.minimumMilk} ton.`);
   if (num(s.marketInvestment) < num(g.minimumMarket)) warnings.push(`Market spend is below the estimated minimum of ${fmt(g.minimumMarket)}.`);
@@ -268,7 +269,11 @@ function renderScenarioResults(key, r) {
     ${metric("Bonus", -r.bonus)}${metric("Fixed salaries", -state.global.salary)}${metric("Rent", -r.rent)}${metric("Loan interest", -r.interest)}
     ${metric("Profit before tax", r.pbt, true)}${metric("Tax loss used", r.usedLoss)}${metric("Game tax", -r.tax)}${metric("Net profit", r.netProfit, true)}
     <p class="result-heading">Cash flow and operations</p>
-    ${metric("Cash before advances", r.advanceCash, true)}${metric("Machine purchases", -r.purchaseCost)}${metric("Loan principal paid", -r.principal)}
+    ${metric("Opening cash", state.global.openingCash)}${metric("New loan received", state.scenarios[key].newLoan)}
+    ${metric("Machine purchases", -r.purchaseCost)}${metric("Milk paid", -r.milkCost)}${metric("Market investment paid", -state.scenarios[key].marketInvestment)}
+    ${metric("Cash after initial commitments", r.advanceCash, true)}${metric("Sales cash received", r.revenue)}
+    ${metric("Cash operating costs", -(r.rent + r.maintenance + r.transport + state.global.salary + r.bonus))}
+    ${metric("Loan principal paid", -r.principal)}${metric("Interest paid", -r.interest)}${metric("Tax paid", -r.tax)}
     ${metric("Closing cash", r.closingCash, true)}${metric("Closing tax-loss pool", r.closingLoss)}${metric("Unsold ice cream", r.unsold, false, " units")}
     <div class="warning-list">${safe ? `<div class="warning warning--okay">No rule or cash warnings in this scenario.</div>` : r.warnings.map(w => `<div class="warning">${w}</div>`).join("")}</div>`;
 }
@@ -286,26 +291,79 @@ function renderComparison(a, b) {
   document.getElementById("compareNameB").textContent = nameB;
   const rows = [
     ["Possible sales", a.sold, b.sold, true], ["Revenue", a.revenue, b.revenue], ["Net profit", a.netProfit, b.netProfit],
-    ["Cash before advances", a.advanceCash, b.advanceCash], ["Closing cash", a.closingCash, b.closingCash],
-    ["Spoiled finished units", a.unsold, b.unsold, true], ["Interest", a.interest, b.interest],
+    ["Cash after initial commitments", a.advanceCash, b.advanceCash], ["Closing cash", a.closingCash, b.closingCash],
+    ["Spoiled finished units", a.unsold, b.unsold, true], ["Rent", a.rent, b.rent], ["Machine purchases", a.purchaseCost, b.purchaseCost],
+    ["Machine maintenance", a.maintenance, b.maintenance], ["Depreciation", a.depreciation, b.depreciation],
+    ["Transport", a.transport, b.transport], ["Market spending", state.scenarios.a.marketInvestment, state.scenarios.b.marketInvestment],
+    ["Interest", a.interest, b.interest],
   ];
   document.getElementById("comparisonBody").innerHTML = rows.map(([label, av, bv, isUnits]) => `
     <tr><td>${label}</td><td>${isUnits ? units(av) : fmt(av)}</td><td>${isUnits ? units(bv) : fmt(bv)}</td><td>${isUnits ? units(av - bv) : signed(av - bv)}</td></tr>`).join("");
 
-  const preferred = a.netProfit >= b.netProfit ? { key: "a", r: a, name: nameA } : { key: "b", r: b, name: nameB };
+  const safeA = a.warnings.length === 0;
+  const safeB = b.warnings.length === 0;
+  const preferA = safeA !== safeB ? safeA : a.netProfit >= b.netProfit;
+  const preferred = preferA ? { key: "a", r: a, name: nameA } : { key: "b", r: b, name: nameB };
   const other = preferred.key === "a" ? b : a;
+  ["a", "b"].forEach(key => {
+    const optionBadge = document.getElementById(`${key}Badge`);
+    optionBadge.textContent = key === preferred.key ? "Recommended" : "Alternative";
+    optionBadge.className = key === preferred.key ? "recommend-badge" : "risk-badge";
+  });
   const badge = document.getElementById("preferredOption");
   badge.textContent = `${preferred.name} leads`;
   badge.className = `status ${preferred.r.closingCash >= 0 && preferred.r.advanceCash >= 0 ? "status--good" : "status--bad"}`;
   document.getElementById("comparisonText").textContent = `${nameA} produces ${fmt(a.netProfit)} net profit and ${fmt(a.closingCash)} closing cash. ${nameB} produces ${fmt(b.netProfit)} net profit and ${fmt(b.closingCash)} closing cash.`;
-  document.getElementById("recommendationText").textContent = `Choose ${preferred.name} under the current estimates: it leads the other option by ${fmt(preferred.r.netProfit - other.netProfit)} in projected net profit.`;
+  const salesDifference = b.sold - a.sold;
+  const drivers = [
+    `${nameB} assumes ${units(Math.abs(salesDifference))} ${salesDifference >= 0 ? "more" : "fewer"} allocated sales than ${nameA}, changing revenue by ${signed(b.revenue - a.revenue)}.`,
+    `${nameA} leaves ${units(a.unsold)} unsold units versus ${units(b.unsold)} in ${nameB}; milk for unsold production has already been paid for.`,
+    `Rent differs by ${fmt(Math.abs(a.rent - b.rent))}; transport differs by ${fmt(Math.abs(a.transport - b.transport))}.`,
+    `Machine purchases differ by ${fmt(Math.abs(a.purchaseCost - b.purchaseCost))}; maintenance and depreciation together differ by ${fmt(Math.abs((a.maintenance + a.depreciation) - (b.maintenance + b.depreciation)))}.`,
+    `Market spending differs by ${fmt(Math.abs(num(state.scenarios.a.marketInvestment) - num(state.scenarios.b.marketInvestment)))} and interest differs by ${fmt(Math.abs(a.interest - b.interest))}.`,
+  ];
+  document.getElementById("comparisonDrivers").innerHTML = drivers.map(item => `<li>${item}</li>`).join("");
+  const safetyReason = preferred.r.warnings.length === 0 && other.warnings.length > 0
+    ? "it is the only option without a cash or operating warning"
+    : `it leads the other option by ${fmt(preferred.r.netProfit - other.netProfit)} in projected net profit`;
+  document.getElementById("recommendationText").textContent = `Choose ${preferred.name} under the current estimates because ${safetyReason}.`;
   document.getElementById("assumptionText").textContent = `the trainer allocates about ${units(preferred.r.sold)} units, while the Year 2 winter forecast remains only a market forecast.`;
-  const downsideSales = Math.max(0, preferred.r.sold - 50000);
+  const downsideReduction = Math.min(50000, preferred.r.sold);
+  const downsideSales = preferred.r.sold - downsideReduction;
   const originalSales = state.scenarios[preferred.key].actualSales;
   state.scenarios[preferred.key].actualSales = downsideSales;
   const downsideProfit = calculate(preferred.key).netProfit;
   state.scenarios[preferred.key].actualSales = originalSales;
-  document.getElementById("downsideText").textContent = `if sales are 50,000 units lower (${units(downsideSales)}), projected net profit becomes ${fmt(downsideProfit)}, while milk already purchased and most fixed costs remain.`;
+  document.getElementById("downsideText").textContent = `if sales are ${units(downsideReduction)} units lower (${units(downsideSales)} sold), projected net profit becomes ${fmt(downsideProfit)}, while milk already purchased and most fixed costs remain.`;
+}
+
+function renderYear1Validation() {
+  const y1 = {
+    openingCash: 100000, unitsSold: 50000, salePrice: 2, milkTons: 2.5, milkPrice: 20000,
+    maintenance: 1800, depreciation: 4375, transport: 5000, market: 5000,
+    salary: 10000, rent: 17000, machinePurchase: 35000, bonusRate: 5, taxRate: 10,
+  };
+  const revenue = round(y1.unitsSold * y1.salePrice);
+  const milk = round(y1.milkTons * y1.milkPrice);
+  const gross = round(revenue - milk - y1.maintenance - y1.depreciation);
+  const bonus = round(Math.max(0, gross) * y1.bonusRate / 100);
+  const pbt = round(gross - y1.transport - y1.market - y1.salary - y1.rent - bonus);
+  const tax = round(Math.max(0, pbt) * y1.taxRate / 100);
+  const profit = round(pbt - tax);
+  const cashAfterInitial = round(y1.openingCash - y1.machinePurchase - milk - y1.market);
+  const closingCash = round(cashAfterInitial + revenue - y1.maintenance - y1.transport - y1.salary - y1.rent - bonus - tax);
+  const expectedMatch = profit === 4171 && closingCash === 73546;
+  const openingMatch = round(state.global.year1Profit) === profit && round(state.global.openingCash) === closingCash;
+  document.getElementById("validationRevenue").textContent = fmt(revenue);
+  document.getElementById("validationPbt").textContent = fmt(pbt);
+  document.getElementById("validationProfit").textContent = fmt(profit);
+  document.getElementById("validationCash").textContent = fmt(closingCash);
+  const status = document.getElementById("validationStatus");
+  status.textContent = expectedMatch && openingMatch ? "Calculation matches" : "Check opening figures";
+  status.className = `status ${expectedMatch && openingMatch ? "status--good" : "status--bad"}`;
+  document.getElementById("validationNote").textContent = expectedMatch
+    ? "Passed: the calculator reproduces the confirmed Year 1 profit and closing cash. Each line is rounded to the nearest whole shekel before subtotals are built."
+    : "The calculated Year 1 result no longer matches the opening figures above. Restore the confirmed figures or recheck the classroom model.";
 }
 
 function updateAll() {
@@ -314,6 +372,7 @@ function updateAll() {
   renderScenarioResults("a", a);
   renderScenarioResults("b", b);
   renderComparison(a, b);
+  renderYear1Validation();
   saveState();
 }
 

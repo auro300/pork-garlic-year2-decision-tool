@@ -44,9 +44,9 @@
             <p class="section-number">01</p>
             <h2>Real position after Year 1 autumn</h2>
           </div>
-          <span class="status status--action">Complete with your model</span>
+          <span class="status status--good">Confirmed from Year 1 model</span>
         </div>
-        <p class="section-intro">These values feed both Year 2 options. Enter the exact closing balances from your classroom model before submission.</p>
+        <p class="section-intro">These confirmed balances feed both Year 2 options. Change them only if your classroom model is corrected.</p>
 
         <div class="input-grid input-grid--4">
           <label class="field">
@@ -134,7 +134,7 @@
           <article class="scenario panel" data-scenario="a">
             <div class="scenario__header">
               <label class="scenario-name"><span>Option A</span><input id="a_name" type="text" /></label>
-              <span class="recommend-badge">Recommended</span>
+              <span id="aBadge" class="recommend-badge">Recommended</span>
             </div>
             <div class="scenario-inputs"></div>
             <div class="scenario-results"></div>
@@ -143,7 +143,7 @@
           <article class="scenario panel" data-scenario="b">
             <div class="scenario__header">
               <label class="scenario-name"><span>Option B</span><input id="b_name" type="text" /></label>
-              <span class="risk-badge">Higher risk</span>
+              <span id="bBadge" class="risk-badge">Alternative</span>
             </div>
             <div class="scenario-inputs"></div>
             <div class="scenario-results"></div>
@@ -156,6 +156,7 @@
             <span id="preferredOption" class="status status--good">Option A leads</span>
           </div>
           <div id="comparisonText" class="comparison-copy"></div>
+          <ul id="comparisonDrivers" class="driver-list"></ul>
           <div class="comparison-table-wrap">
             <table class="comparison-table">
               <thead><tr><th>Measure</th><th id="compareNameA">Option A</th><th id="compareNameB">Option B</th><th>Difference A − B</th></tr></thead>
@@ -177,16 +178,17 @@
             <p class="section-number">04</p>
             <h2>Real Year 1 season validation</h2>
           </div>
-          <span class="status status--good">Matches Team 3 winter</span>
+          <span id="validationStatus" class="status status--good">Calculating check</span>
         </div>
-        <p class="section-intro">Known classroom result: Premise F, three Machine 2 units, 17 tons of milk, 330,000 requested, 280,000 sold, Sh 7,000 market spend, and a Sh 532,000 eight-season loan.</p>
+        <p class="section-intro">The application recalculates the confirmed Year 1 season below. The expected result is Sh 4,171 profit and Sh 73,546 closing cash.</p>
+        <p class="helper">Confirmed inputs: 50,000 units sold at Sh 2; 2.5 tons of milk at Sh 20,000; maintenance Sh 1,800; depreciation Sh 4,375; transport Sh 5,000; market investment Sh 5,000; salaries Sh 10,000; rent Sh 17,000; opening cash Sh 100,000; and one Machine 1 purchase for Sh 35,000. There were no loans or carried tax losses.</p>
         <div class="validation-grid">
-          <div><span>Revenue</span><strong>Sh 560,000</strong></div>
-          <div><span>Profit before tax</span><strong>Sh 24,691</strong></div>
-          <div><span>Net profit</span><strong>Sh 22,222</strong></div>
-          <div><span>Closing cash</span><strong>Sh 338,347</strong></div>
+          <div><span>Revenue</span><strong id="validationRevenue">—</strong></div>
+          <div><span>Profit before tax</span><strong id="validationPbt">—</strong></div>
+          <div><span>Net profit</span><strong id="validationProfit">—</strong></div>
+          <div><span>Closing cash</span><strong id="validationCash">—</strong></div>
         </div>
-        <p class="validation-note">This check uses the Year 1 posting rule: round each line to the nearest whole shekel, then build subtotals from the rounded lines.</p>
+        <p id="validationNote" class="validation-note"></p>
       </section>
     </main>
 

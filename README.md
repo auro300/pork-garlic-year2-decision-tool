@@ -1,6 +1,8 @@
 # Team 3 Year 2 Decision Tool
 
-A static decision-support website for the Pork & Garlic Ice Cream Co. classroom simulation.
+A complete static decision-support website for the Pork & Garlic Ice Cream Co. classroom simulation.
+
+Live site: https://pork-garlic-year2-decision-tool.vercel.app/
 
 ## What the website does
 
@@ -9,19 +11,17 @@ A static decision-support website for the Pork & Garlic Ice Cream Co. classroom 
 - Calculates profit and loss, tax-loss use, cash timing, and closing cash.
 - Checks production against milk, machines, premises, and requested sales.
 - Flags negative cash before advance payments and at season end.
-- Includes the verified Team 3 Year 1 winter result.
+- Recalculates the verified Year 1 result: Sh 4,171 annual profit and Sh 73,546 closing cash.
+- Explains the sales, spoilage, rent, machine, transport, market-spending, and interest differences between options.
+- Publishes a recommendation, its main assumption, and an allocation downside test of up to 50,000 units.
 - Saves entries in the browser automatically.
 
-## Before submitting
+## Confirmed starting position
 
-Replace the opening-position estimates with the exact Year 1 autumn figures from the classroom model. When the trainer releases Year 2 rules, update the editable premises, machine, and price estimates.
+The default opening position uses the confirmed Year 1 model: Sh 73,546 cash, Sh 4,171 annual profit, one owned Machine 1 with seven seasons of remaining life, no unpaid loans, and no unused tax losses. Year 2 prices and rules remain clearly labelled estimates and can be edited when the trainer releases the new rules.
 
-## Deploy on Vercel
+## Deployment
 
-1. Upload `index.html`, `styles.css`, `app.js`, `vercel.json`, and this README to the root of your GitHub repository.
-2. In Vercel, import that repository.
-3. Choose **Other** as the framework preset.
-4. Leave the build command empty and use `.` as the output directory if Vercel asks.
-5. Deploy, open the live link, and test both strategies on desktop and phone.
+Vercel deploys the repository as a static site. No packages or build command are required.
 
-No packages or build step are required.
+The Vercel dashboard deployment URL requires a Vercel login. Submit the public site URL above together with the GitHub repository URL.

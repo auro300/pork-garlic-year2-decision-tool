@@ -141,6 +141,8 @@ td input { padding: 7px 8px; }
 
 .comparison-panel { margin-top: 20px; }
 .comparison-copy { margin: 12px 0 18px; color: var(--muted); }
+.driver-list { margin: -6px 0 18px; padding-left: 20px; color: var(--muted); }
+.driver-list li { margin: 5px 0; }
 .comparison-table th:not(:first-child), .comparison-table td:not(:first-child) { text-align: right; }
 .comparison-table td { padding: 10px 12px; }
 .comparison-table td:first-child { font-weight: 750; }
