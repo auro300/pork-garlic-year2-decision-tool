@@ -2,7 +2,7 @@
 
 A complete static decision-support website for the Pork & Garlic Ice Cream Co. classroom simulation.
 
-Live site: https://pork-garlic-year2-decision-tool.vercel.app/
+Live site: https://pork-garlic-year2-decision-tool-xi.vercel.app/
 
 ## What the website does
 
