@@ -20,8 +20,8 @@ const premiseDefaults = [
 
 const initialState = {
   global: {
-    openingCash: 73546,
-    year1Profit: 4171,
+    openingCash: 338347,
+    year1Profit: 22222,
     openingTaxLoss: 0,
     salePrice: 2,
     milkPrice: 20000,
@@ -32,27 +32,27 @@ const initialState = {
     minimumMilk: 1,
     minimumMarket: 1000,
   },
-  machines: machineDefaults.map(m => ({ ...m, owned: m.id === 1 ? 1 : 0, life: m.id === 1 ? 7 : 0 })),
+  machines: machineDefaults.map(m => ({ ...m, owned: m.id === 2 ? 3 : 0, life: m.id === 2 ? 4 : 0 })),
   premises: premiseDefaults.map(p => ({ ...p })),
   loans: [
-    { balance: 0, principalDue: 0, rate: 10 },
+    { balance: 266000, principalDue: 66500, rate: 10 },
     { balance: 0, principalDue: 0, rate: 10 },
     { balance: 0, principalDue: 0, rate: 10 },
   ],
   scenarios: {
     a: {
-      name: "Balanced plan", milkTons: 2.5, plannedProduction: 50000, salesRequest: 50000,
-      marketInvestment: 5000, actualSales: 45000, newLoan: 0, loanRate: 10, loanTerm: 4,
-      premises: { A: 0, B: 0, C: 0, D: 50000, E: 0, F: 0 },
-      machineUse: { 1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+      name: "Cash-protected plan", milkTons: 18, plannedProduction: 360000, salesRequest: 360000,
+      marketInvestment: 7000, actualSales: 330000, newLoan: 30000, loanRate: 10, loanTerm: 4,
+      premises: { A: 0, B: 0, C: 0, D: 0, E: 0, F: 360000 },
+      machineUse: { 1: 0, 2: 3, 3: 0, 4: 0, 5: 0, 6: 0 },
       machineBuy: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
     },
     b: {
-      name: "Growth plan", milkTons: 3.5, plannedProduction: 70000, salesRequest: 70000,
-      marketInvestment: 9000, actualSales: 55000, newLoan: 30000, loanRate: 10, loanTerm: 4,
-      premises: { A: 0, B: 0, C: 0, D: 0, E: 70000, F: 0 },
-      machineUse: { 1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
-      machineBuy: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+      name: "Maximum-sales plan", milkTons: 21, plannedProduction: 410000, salesRequest: 410000,
+      marketInvestment: 10000, actualSales: 360000, newLoan: 150000, loanRate: 10, loanTerm: 8,
+      premises: { A: 0, B: 0, C: 0, D: 50000, E: 0, F: 360000 },
+      machineUse: { 1: 1, 2: 3, 3: 0, 4: 0, 5: 0, 6: 0 },
+      machineBuy: { 1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
     },
   },
 };
@@ -68,7 +68,7 @@ function signed(value) { const n = round(value); return `${n >= 0 ? "+" : "−"}
 
 function loadState() {
   try {
-    const saved = JSON.parse(localStorage.getItem("team3-y2-tool-v2"));
+    const saved = JSON.parse(localStorage.getItem("team3-y2-tool-v3"));
     if (!saved) return deepClone(initialState);
     return mergeDeep(deepClone(initialState), saved);
   } catch { return deepClone(initialState); }
@@ -84,7 +84,7 @@ function mergeDeep(target, source) {
   return target;
 }
 
-function saveState() { localStorage.setItem("team3-y2-tool-v2", JSON.stringify(state)); }
+function saveState() { localStorage.setItem("team3-y2-tool-v3", JSON.stringify(state)); }
 
 function input(value, attrs = "") { return `<input type="number" value="${value}" ${attrs}>`; }
 
@@ -339,20 +339,21 @@ function renderComparison(a, b) {
 
 function renderYear1Validation() {
   const y1 = {
-    openingCash: 100000, unitsSold: 50000, salePrice: 2, milkTons: 2.5, milkPrice: 20000,
-    maintenance: 1800, depreciation: 4375, transport: 5000, market: 5000,
-    salary: 10000, rent: 17000, machinePurchase: 35000, bonusRate: 5, taxRate: 10,
+    openingCash: 100000, unitsSold: 280000, salePrice: 2, milkTons: 17, milkPrice: 20000,
+    maintenance: 8700, depreciation: 35625, transport: 56000, market: 7000,
+    salary: 10000, rent: 16000, machinePurchase: 285000, loanReceived: 532000,
+    interest: 53200, principal: 66500, bonusRate: 5, taxRate: 10,
   };
   const revenue = round(y1.unitsSold * y1.salePrice);
   const milk = round(y1.milkTons * y1.milkPrice);
   const gross = round(revenue - milk - y1.maintenance - y1.depreciation);
   const bonus = round(Math.max(0, gross) * y1.bonusRate / 100);
-  const pbt = round(gross - y1.transport - y1.market - y1.salary - y1.rent - bonus);
+  const pbt = round(gross - y1.transport - y1.market - y1.salary - y1.rent - bonus - y1.interest);
   const tax = round(Math.max(0, pbt) * y1.taxRate / 100);
   const profit = round(pbt - tax);
-  const cashAfterInitial = round(y1.openingCash - y1.machinePurchase - milk - y1.market);
-  const closingCash = round(cashAfterInitial + revenue - y1.maintenance - y1.transport - y1.salary - y1.rent - bonus - tax);
-  const expectedMatch = profit === 4171 && closingCash === 73546;
+  const cashAfterInitial = round(y1.openingCash + y1.loanReceived - y1.machinePurchase - milk - y1.market);
+  const closingCash = round(cashAfterInitial + revenue - y1.maintenance - y1.transport - y1.salary - y1.rent - bonus - y1.interest - y1.principal - tax);
+  const expectedMatch = pbt === 24691 && profit === 22222 && closingCash === 338347;
   const openingMatch = round(state.global.year1Profit) === profit && round(state.global.openingCash) === closingCash;
   document.getElementById("validationRevenue").textContent = fmt(revenue);
   document.getElementById("validationPbt").textContent = fmt(pbt);
