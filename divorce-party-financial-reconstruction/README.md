@@ -8,7 +8,11 @@ Status: all 100 decisions certified
 
 ## Deployment
 
-This self-contained site is published in the `divorce-party-financial-reconstruction/` directory on the `divorce-party-submission` branch of the student's GitHub repository. For Vercel, import that repository, select this branch, and set the project root directory to `divorce-party-financial-reconstruction`. No build command or framework is required. The published routes are `/`, `/review/`, and `/submission.json`.
+Production site: https://divorce-party-financial-reconstruct.vercel.app
+
+Public source: https://github.com/auro300/pork-garlic-year2-decision-tool/tree/divorce-party-submission/divorce-party-financial-reconstruction
+
+The self-contained site is published in its own directory on the `divorce-party-submission` branch. Its separate Vercel project was deployed from the clean `app/` directory; it is not linked to the GitHub repository for automatic redeployment. The verified routes are `/`, `/review/`, and `/submission.json`.
 
 ## Local review
 
@@ -18,7 +22,7 @@ The local preview runs at:
 - Assessor review: http://127.0.0.1:8765/review/
 - Submission JSON: http://127.0.0.1:8765/submission.json
 
-## Current draft results
+## Final base-case results
 
 - Revenue: EUR 960,000
 - Base-case net profit: EUR 65,000
