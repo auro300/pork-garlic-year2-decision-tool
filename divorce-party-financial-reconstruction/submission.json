@@ -3703,8 +3703,8 @@
       },
       {
         "version": "3",
-        "feedback": "Ready for student review but not honest to publish until student ID and certification are supplied.",
-        "improvement": "Publication remains intentionally disabled and every remaining blocker is visible."
+        "feedback": "The local review build still lacked the student ID, certification and live-route evidence.",
+        "improvement": "Those gates were closed before final publication; the student’s single attestation and the remaining inventory and insurance caveats are disclosed."
       }
     ]
   },
