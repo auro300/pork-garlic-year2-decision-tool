@@ -6,7 +6,11 @@ Student: Artjoms Bogomolnikovs
 Student ID: ab25336  
 Status: all 100 decisions certified
 
-## Submission routes
+## Deployment
+
+This self-contained site is published in the `divorce-party-financial-reconstruction/` directory on the `divorce-party-submission` branch of the student's GitHub repository. For Vercel, import that repository, select this branch, and set the project root directory to `divorce-party-financial-reconstruction`. No build command or framework is required. The published routes are `/`, `/review/`, and `/submission.json`.
+
+## Local review
 
 The local preview runs at:
 
