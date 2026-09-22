@@ -4,7 +4,7 @@ This project is a separate local working copy. The teacher's Google Drive was us
 
 Student: Artjoms Bogomolnikovs  
 Student ID: ab25336  
-Status: all 100 decisions certified
+Status: all 100 decisions covered by the student's single blanket attestation on 21 September 2026. The explanations are AI-assisted drafts, not evidence of 100 separate student review sessions.
 
 ## Deployment
 
@@ -12,7 +12,9 @@ Production site: https://divorce-party-financial-reconstruct.vercel.app
 
 Public source: https://github.com/auro300/pork-garlic-year2-decision-tool/tree/divorce-party-submission/divorce-party-financial-reconstruction
 
-The self-contained site is published in its own directory on the `divorce-party-submission` branch. Its separate Vercel project was deployed from the clean `app/` directory; it is not linked to the GitHub repository for automatic redeployment. The verified routes are `/`, `/review/`, and `/submission.json`.
+The self-contained site is published in its own directory on the `divorce-party-submission` branch of an existing public repository. This is not a standalone Divorce Party repository. Its separate Vercel project was deployed from the clean `app/` directory; it is not linked to the GitHub repository for automatic redeployment. The verified routes are `/`, `/review/`, and `/submission.json`.
+
+The student will paste the production Vercel URL into the class submission sheet. This project does not claim that the class sheet has been updated.
 
 ## Local review
 
@@ -35,4 +37,4 @@ The local preview runs at:
 
 - The EUR 9,000 inventory conflict is explicitly accepted as unresolved evidence uncertainty. It is disclosed and is not used as an income plug.
 - Insurance evidence is unavailable, so no unsupported adjustment is recorded.
-- The public repository contains the submission application only. Teacher source materials and internal working files are excluded.
+- The public Divorce Party directory contains the submission application only. Teacher source materials and internal working files are excluded from that directory.
