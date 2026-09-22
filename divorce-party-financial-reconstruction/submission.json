@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "caseId": "DPI-HT-01",
-  "version": "3.0-certified",
+  "version": "3.0-final",
   "student": {
     "id": "ab25336",
     "name": "Artjoms Bogomolnikovs",
@@ -3616,7 +3616,7 @@
     ],
     "warning": "The €65,000 base-case profit is provisional because inventory differs by €9,000 and insurance evidence is missing. Closing cash is only €60,000 against €406,000 of liabilities."
   },
-  "reviewStatus": "Student-certified submission prepared for GitHub and Vercel deployment.",
+  "reviewStatus": "Final student-certified submission. All required routes were deployed and verified.",
   "reviewSummary": {
     "agent1Profit": 63000,
     "agent2Profit": 74000,
@@ -3642,10 +3642,8 @@
     ]
   },
   "submissionReadiness": {
-    "ready": false,
-    "blockingItems": [
-      "Final deployed-route verification"
-    ]
+    "ready": true,
+    "blockingItems": []
   },
   "verificationPreparation": {
     "likelyQuestions": [
@@ -3682,5 +3680,14 @@
       "balanceSheetEffect": "Contract liabilities fall €90,000 and equity rises €90,000; cash is unchanged because it was already received."
     }
   },
-  "publication": null
+  "publication": {
+    "github": "https://github.com/auro300/pork-garlic-year2-decision-tool/tree/divorce-party-submission/divorce-party-financial-reconstruction",
+    "vercel": "https://divorce-party-financial-reconstruct.vercel.app",
+    "verifiedRoutes": [
+      "/",
+      "/review/",
+      "/submission.json"
+    ],
+    "verifiedAt": "2026-09-22"
+  }
 }
