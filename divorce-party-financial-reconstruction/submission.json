@@ -7,7 +7,9 @@
     "name": "Artjoms Bogomolnikovs",
     "certificationStatus": "certified",
     "certifiedAt": "2026-09-21",
-    "certificationStatement": "I certify all 100 decisions in this submission."
+    "certificationStatement": "I certify all 100 decisions in this submission.",
+    "certificationMethod": "Single blanket attestation supplied by the student in chat; no separate per-decision review session is evidenced.",
+    "reasoningProvenance": "Decision explanations were AI-assisted drafts that the student attested to collectively."
   },
   "evidence": [
     {
@@ -200,7 +202,7 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-02-12 RCPT-NS; Contracts page 1 INV-26012",
+          "locator": "Bank 2026-02-12 RCPT-NS",
           "reliability": "high"
         },
         {
@@ -212,10 +214,11 @@
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Pages 1-2: INV-26012, INV-26031, INV-26047, INV-26063, NB-SEP, FF-SEP and R-17",
+          "locator": "Contracts page 1 INV-26012",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-02-12 RCPT-NS; Contracts page 1 INV-26012"
     },
     {
       "id": "D002",
@@ -235,7 +238,7 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-03-18 RCPT-FF; Contracts page 1 INV-26031",
+          "locator": "Bank 2026-03-18 RCPT-FF",
           "reliability": "high"
         },
         {
@@ -247,10 +250,11 @@
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Pages 1-2: INV-26012, INV-26031, INV-26047, INV-26063, NB-SEP, FF-SEP and R-17",
+          "locator": "Contracts page 1 INV-26031",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-03-18 RCPT-FF; Contracts page 1 INV-26031"
     },
     {
       "id": "D003",
@@ -270,7 +274,7 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-04-29 RCPT-PHX; Contracts page 1 INV-26047",
+          "locator": "Bank 2026-04-29 RCPT-PHX",
           "reliability": "high"
         },
         {
@@ -282,10 +286,11 @@
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Pages 1-2: INV-26012, INV-26031, INV-26047, INV-26063, NB-SEP, FF-SEP and R-17",
+          "locator": "Contracts page 1 INV-26047",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-04-29 RCPT-PHX; Contracts page 1 INV-26047"
     },
     {
       "id": "D004",
@@ -305,7 +310,7 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-06-20 RCPT-LIB; Contracts page 1 INV-26063",
+          "locator": "Bank 2026-06-20 RCPT-LIB",
           "reliability": "high"
         },
         {
@@ -317,10 +322,11 @@
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Pages 1-2: INV-26012, INV-26031, INV-26047, INV-26063, NB-SEP, FF-SEP and R-17",
+          "locator": "Contracts page 1 INV-26063",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-06-20 RCPT-LIB; Contracts page 1 INV-26063"
     },
     {
       "id": "D005",
@@ -341,7 +347,8 @@
           "locator": "Bank 2026-01-10 RCPT-001",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-01-10 RCPT-001"
     },
     {
       "id": "D006",
@@ -360,16 +367,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-01 PLAT-FSB; CRM row WEB-FSB",
+          "locator": "Bank 2026-08-01 PLAT-FSB",
           "reliability": "high"
         },
         {
           "sourceId": "E03",
           "title": "03_03 CRM Export Cleaned FINAL.xlsx",
-          "locator": "Customer rows C-001 through FUT-02",
+          "locator": "CRM row WEB-FSB",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-01 PLAT-FSB; CRM row WEB-FSB"
     },
     {
       "id": "D007",
@@ -390,19 +398,19 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-15 PLAT-NCB; CRM row WEB-NCB; Contracts page 2 R-17",
+          "locator": "Bank 2026-08-15 PLAT-NCB",
           "reliability": "high"
         },
         {
           "sourceId": "E03",
           "title": "03_03 CRM Export Cleaned FINAL.xlsx",
-          "locator": "Customer rows C-001 through FUT-02",
+          "locator": "CRM row WEB-NCB",
           "reliability": "medium"
         },
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Pages 1-2: INV-26012, INV-26031, INV-26047, INV-26063, NB-SEP, FF-SEP and R-17",
+          "locator": "Contracts page 2 R-17",
           "reliability": "high"
         },
         {
@@ -411,7 +419,8 @@
           "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-15 PLAT-NCB; CRM row WEB-NCB; Contracts page 2 R-17"
     },
     {
       "id": "D008",
@@ -431,7 +440,7 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-28 DEP-NB; Contracts page 2 NB-SEP",
+          "locator": "Bank 2026-08-28 DEP-NB",
           "reliability": "high"
         },
         {
@@ -443,10 +452,11 @@
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Pages 1-2: INV-26012, INV-26031, INV-26047, INV-26063, NB-SEP, FF-SEP and R-17",
+          "locator": "Contracts page 2 NB-SEP",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-28 DEP-NB; Contracts page 2 NB-SEP"
     },
     {
       "id": "D009",
@@ -466,7 +476,7 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-29 DEP-FF2; Contracts page 2 FF-SEP",
+          "locator": "Bank 2026-08-29 DEP-FF2",
           "reliability": "high"
         },
         {
@@ -478,10 +488,11 @@
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Pages 1-2: INV-26012, INV-26031, INV-26047, INV-26063, NB-SEP, FF-SEP and R-17",
+          "locator": "Contracts page 2 FF-SEP",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-29 DEP-FF2; Contracts page 2 FF-SEP"
     },
     {
       "id": "D010",
@@ -500,16 +511,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 SUP-BOX; Purchases page 1 BoxWorks",
+          "locator": "Bank 2026-08-31 SUP-BOX",
           "reliability": "high"
         },
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Pages 1-2: supplier table and equipment/repair invoices",
+          "locator": "Purchases page 1 BoxWorks",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 SUP-BOX; Purchases page 1 BoxWorks"
     },
     {
       "id": "D011",
@@ -528,16 +540,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 SUP-GLS; Purchases page 1 Glass & Drama",
+          "locator": "Bank 2026-08-31 SUP-GLS",
           "reliability": "high"
         },
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Pages 1-2: supplier table and equipment/repair invoices",
+          "locator": "Purchases page 1 Glass & Drama",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 SUP-GLS; Purchases page 1 Glass & Drama"
     },
     {
       "id": "D012",
@@ -556,16 +569,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 SUP-PRT; Purchases page 1 Print Again",
+          "locator": "Bank 2026-08-31 SUP-PRT",
           "reliability": "high"
         },
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Pages 1-2: supplier table and equipment/repair invoices",
+          "locator": "Purchases page 1 Print Again",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 SUP-PRT; Purchases page 1 Print Again"
     },
     {
       "id": "D013",
@@ -584,16 +598,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 SUP-EVT; Purchases page 1 Event Things Europe",
+          "locator": "Bank 2026-08-31 SUP-EVT",
           "reliability": "high"
         },
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Pages 1-2: supplier table and equipment/repair invoices",
+          "locator": "Purchases page 1 Event Things Europe",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 SUP-EVT; Purchases page 1 Event Things Europe"
     },
     {
       "id": "D014",
@@ -612,16 +627,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 PAYROLL and Payroll row 5; January split absent",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "high"
         },
         {
           "sourceId": "E07",
           "title": "03_07 Payroll Bonuses Contractors NEW.xlsx",
-          "locator": "Rows 2-6: departments, cash paid and founder bonus",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 PAYROLL and Payroll row 5; January split absent"
     },
     {
       "id": "D015",
@@ -640,16 +656,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 PAYROLL and Payroll row 5; February split absent",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "high"
         },
         {
           "sourceId": "E07",
           "title": "03_07 Payroll Bonuses Contractors NEW.xlsx",
-          "locator": "Rows 2-6: departments, cash paid and founder bonus",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 PAYROLL and Payroll row 5; February split absent"
     },
     {
       "id": "D016",
@@ -668,16 +685,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 PAYROLL and Payroll row 5; March split absent",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "high"
         },
         {
           "sourceId": "E07",
           "title": "03_07 Payroll Bonuses Contractors NEW.xlsx",
-          "locator": "Rows 2-6: departments, cash paid and founder bonus",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 PAYROLL and Payroll row 5; March split absent"
     },
     {
       "id": "D017",
@@ -696,16 +714,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 PAYROLL and Payroll row 5; April split absent",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "high"
         },
         {
           "sourceId": "E07",
           "title": "03_07 Payroll Bonuses Contractors NEW.xlsx",
-          "locator": "Rows 2-6: departments, cash paid and founder bonus",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 PAYROLL and Payroll row 5; April split absent"
     },
     {
       "id": "D018",
@@ -724,16 +743,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 PAYROLL and Payroll row 5; May split absent",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "high"
         },
         {
           "sourceId": "E07",
           "title": "03_07 Payroll Bonuses Contractors NEW.xlsx",
-          "locator": "Rows 2-6: departments, cash paid and founder bonus",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 PAYROLL and Payroll row 5; May split absent"
     },
     {
       "id": "D019",
@@ -752,16 +772,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 PAYROLL and Payroll row 5; June split absent",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "high"
         },
         {
           "sourceId": "E07",
           "title": "03_07 Payroll Bonuses Contractors NEW.xlsx",
-          "locator": "Rows 2-6: departments, cash paid and founder bonus",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 PAYROLL and Payroll row 5; June split absent"
     },
     {
       "id": "D020",
@@ -780,16 +801,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 PAYROLL and Payroll row 5; July split absent",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "high"
         },
         {
           "sourceId": "E07",
           "title": "03_07 Payroll Bonuses Contractors NEW.xlsx",
-          "locator": "Rows 2-6: departments, cash paid and founder bonus",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 PAYROLL and Payroll row 5; July split absent"
     },
     {
       "id": "D021",
@@ -808,16 +830,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 PAYROLL and Payroll row 5; August split absent",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "high"
         },
         {
           "sourceId": "E07",
           "title": "03_07 Payroll Bonuses Contractors NEW.xlsx",
-          "locator": "Rows 2-6: departments, cash paid and founder bonus",
+          "locator": "Bank 2026-08-31 PAYROLL",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 PAYROLL and Payroll row 5; August split absent"
     },
     {
       "id": "D022",
@@ -838,7 +861,8 @@
           "locator": "Bank 2026-08-31 RENT",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 RENT"
     },
     {
       "id": "D023",
@@ -859,7 +883,8 @@
           "locator": "Bank 2026-08-31 MKT",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 MKT"
     },
     {
       "id": "D024",
@@ -880,7 +905,8 @@
           "locator": "Bank 2026-08-31 SOFT",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 SOFT"
     },
     {
       "id": "D025",
@@ -901,7 +927,8 @@
           "locator": "Bank 2026-08-31 UTIL",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 UTIL"
     },
     {
       "id": "D026",
@@ -921,13 +948,13 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 REPAIR; Purchases page 2 R-771",
+          "locator": "Bank 2026-08-31 REPAIR",
           "reliability": "high"
         },
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Pages 1-2: supplier table and equipment/repair invoices",
+          "locator": "Purchases page 2 R-771",
           "reliability": "high"
         },
         {
@@ -936,7 +963,8 @@
           "locator": "Rows 2-6: opening PPE, additions, repair and depreciation",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 REPAIR; Purchases page 2 R-771"
     },
     {
       "id": "D027",
@@ -956,13 +984,13 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 CAPEX-PACK; Purchases page 2 A-910",
+          "locator": "Bank 2026-08-31 CAPEX-PACK",
           "reliability": "high"
         },
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Pages 1-2: supplier table and equipment/repair invoices",
+          "locator": "Purchases page 2 A-910",
           "reliability": "high"
         },
         {
@@ -971,7 +999,8 @@
           "locator": "Rows 2-6: opening PPE, additions, repair and depreciation",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 CAPEX-PACK; Purchases page 2 A-910"
     },
     {
       "id": "D028",
@@ -991,13 +1020,13 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 CAPEX-PHOTO; Purchases page 2 P-404",
+          "locator": "Bank 2026-08-31 CAPEX-PHOTO",
           "reliability": "high"
         },
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Pages 1-2: supplier table and equipment/repair invoices",
+          "locator": "Purchases page 2 P-404",
           "reliability": "high"
         },
         {
@@ -1006,7 +1035,8 @@
           "locator": "Rows 2-6: opening PPE, additions, repair and depreciation",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 CAPEX-PHOTO; Purchases page 2 P-404"
     },
     {
       "id": "D029",
@@ -1025,16 +1055,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-03-01 LOAN-ADV; Loans page 1",
+          "locator": "Bank 2026-03-01 LOAN-ADV",
           "reliability": "high"
         },
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Pages 1-2: loan bridge, owner payments and counsel letter",
+          "locator": "Loans page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-03-01 LOAN-ADV; Loans page 1"
     },
     {
       "id": "D030",
@@ -1053,16 +1084,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 PRINCIPAL; Loans page 1",
+          "locator": "Bank 2026-08-31 PRINCIPAL",
           "reliability": "high"
         },
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Pages 1-2: loan bridge, owner payments and counsel letter",
+          "locator": "Loans page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 PRINCIPAL; Loans page 1"
     },
     {
       "id": "D031",
@@ -1082,13 +1114,13 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 INT; Loans page 1",
+          "locator": "Bank 2026-08-31 INT",
           "reliability": "high"
         },
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Pages 1-2: loan bridge, owner payments and counsel letter",
+          "locator": "Loans page 1",
           "reliability": "high"
         },
         {
@@ -1097,7 +1129,8 @@
           "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 INT; Loans page 1"
     },
     {
       "id": "D032",
@@ -1117,13 +1150,13 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 VILLA; Loans page 1",
+          "locator": "Bank 2026-08-31 VILLA",
           "reliability": "high"
         },
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Pages 1-2: loan bridge, owner payments and counsel letter",
+          "locator": "Loans page 1",
           "reliability": "high"
         },
         {
@@ -1132,7 +1165,8 @@
           "locator": "Pages 1-3: override instructions and admissions",
           "reliability": "low"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 VILLA; Loans page 1"
     },
     {
       "id": "D033",
@@ -1151,16 +1185,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank 2026-08-31 OWNERCARD; Loans page 1",
+          "locator": "Bank 2026-08-31 OWNERCARD",
           "reliability": "high"
         },
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Pages 1-2: loan bridge, owner payments and counsel letter",
+          "locator": "Loans page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank 2026-08-31 OWNERCARD; Loans page 1"
     },
     {
       "id": "D034",
@@ -1179,16 +1214,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Full bank export and management file reviewed; no insurance entry located",
+          "locator": "Full bank export",
           "reliability": "high"
         },
         {
           "sourceId": "E01",
           "title": "03_01 USE THIS NUMBERS FINAL v9.xlsx",
-          "locator": "Management P&L rows 2-9",
+          "locator": "management file reviewed",
           "reliability": "low"
         }
-      ]
+      ],
+      "evidenceSummary": "Full bank export and management file reviewed; no insurance entry located"
     },
     {
       "id": "D035",
@@ -1207,16 +1243,17 @@
         {
           "sourceId": "E05",
           "title": "03_05 Warehouse Count Marta Notes.pdf",
-          "locator": "Warehouse pages 1-2; Later evidence page 1 stock assessment",
+          "locator": "Warehouse pages 1-2",
           "reliability": "high"
         },
         {
           "sourceId": "E11",
           "title": "03_11 Evidence Received After Takeover.pdf",
-          "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
+          "locator": "Later evidence page 1 stock assessment",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Warehouse pages 1-2; Later evidence page 1 stock assessment"
     },
     {
       "id": "D036",
@@ -1235,16 +1272,17 @@
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Contracts page 2 R-17; Later evidence page 1 liquidator notice",
+          "locator": "Contracts page 2 R-17",
           "reliability": "high"
         },
         {
           "sourceId": "E11",
           "title": "03_11 Evidence Received After Takeover.pdf",
-          "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
+          "locator": "Later evidence page 1 liquidator notice",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Contracts page 2 R-17; Later evidence page 1 liquidator notice"
     },
     {
       "id": "D037",
@@ -1263,16 +1301,17 @@
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Loans page 2 counsel letter; Later evidence page 1",
+          "locator": "Loans page 2 counsel letter",
           "reliability": "high"
         },
         {
           "sourceId": "E11",
           "title": "03_11 Evidence Received After Takeover.pdf",
-          "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
+          "locator": "Later evidence page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Loans page 2 counsel letter; Later evidence page 1"
     },
     {
       "id": "D038",
@@ -1300,7 +1339,8 @@
           "locator": "Pages 1-2: counted stock and inventory roll-forward evidence",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Purchases page 1 total €459,000"
     },
     {
       "id": "D039",
@@ -1328,7 +1368,8 @@
           "locator": "Customer rows C-001 through FUT-02",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank customer-credit rows RCPT-001 through DEP-FF2, excluding LOAN-ADV"
     },
     {
       "id": "D040",
@@ -1347,16 +1388,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Bank final OWNERCARD row and Later evidence page 1 bank confirmation",
+          "locator": "Bank final OWNERCARD row",
           "reliability": "high"
         },
         {
           "sourceId": "E11",
           "title": "03_11 Evidence Received After Takeover.pdf",
-          "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
+          "locator": "Later evidence page 1 bank confirmation",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Bank final OWNERCARD row and Later evidence page 1 bank confirmation"
     },
     {
       "id": "D041",
@@ -1388,13 +1430,13 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Contracts page 2 NB-SEP and FF-SEP; bank DEP-NB and DEP-FF2",
+          "locator": "bank DEP-NB and DEP-FF2",
           "reliability": "high"
         },
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Pages 1-2: INV-26012, INV-26031, INV-26047, INV-26063, NB-SEP, FF-SEP and R-17",
+          "locator": "Contracts page 2 NB-SEP and FF-SEP",
           "reliability": "high"
         },
         {
@@ -1403,7 +1445,8 @@
           "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Contracts page 2 NB-SEP and FF-SEP; bank DEP-NB and DEP-FF2"
     },
     {
       "id": "D042",
@@ -1434,16 +1477,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Loans page 1 signed loan evidence; bank LOAN-ADV",
+          "locator": "bank LOAN-ADV",
           "reliability": "high"
         },
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Pages 1-2: loan bridge, owner payments and counsel letter",
+          "locator": "Loans page 1 signed loan evidence",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Loans page 1 signed loan evidence; bank LOAN-ADV"
     },
     {
       "id": "D043",
@@ -1474,16 +1518,17 @@
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Purchases page 2 A-910; Assets row Pack-O-Matic",
+          "locator": "Purchases page 2 A-910",
           "reliability": "high"
         },
         {
           "sourceId": "E08",
           "title": "03_08 Assets Repairs Leases Maybe.xlsx",
-          "locator": "Rows 2-6: opening PPE, additions, repair and depreciation",
+          "locator": "Assets row Pack-O-Matic",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Purchases page 2 A-910; Assets row Pack-O-Matic"
     },
     {
       "id": "D044",
@@ -1514,16 +1559,17 @@
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Purchases page 2 P-404; Assets row Regret Photo Booth",
+          "locator": "Purchases page 2 P-404",
           "reliability": "high"
         },
         {
           "sourceId": "E08",
           "title": "03_08 Assets Repairs Leases Maybe.xlsx",
-          "locator": "Rows 2-6: opening PPE, additions, repair and depreciation",
+          "locator": "Assets row Regret Photo Booth",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Purchases page 2 P-404; Assets row Regret Photo Booth"
     },
     {
       "id": "D045",
@@ -1554,16 +1600,17 @@
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Purchases page 2 R-771; Assets replacement-belt row",
+          "locator": "Purchases page 2 R-771",
           "reliability": "high"
         },
         {
           "sourceId": "E08",
           "title": "03_08 Assets Repairs Leases Maybe.xlsx",
-          "locator": "Rows 2-6: opening PPE, additions, repair and depreciation",
+          "locator": "Assets replacement-belt row",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Purchases page 2 R-771; Assets replacement-belt row"
     },
     {
       "id": "D046",
@@ -1595,22 +1642,23 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Loans page 1 villa evidence; Messages page 2",
+          "locator": "OPEN through OWNERCARD transaction rows",
           "reliability": "high"
         },
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Pages 1-2: loan bridge, owner payments and counsel letter",
+          "locator": "Loans page 1 villa evidence",
           "reliability": "high"
         },
         {
           "sourceId": "E10",
           "title": "03_10 Email and WhatsApp Dump DO NOT FORWARD.pdf",
-          "locator": "Pages 1-3: override instructions and admissions",
+          "locator": "Messages page 2",
           "reliability": "low"
         }
-      ]
+      ],
+      "evidenceSummary": "Loans page 1 villa evidence; Messages page 2"
     },
     {
       "id": "D047",
@@ -1641,16 +1689,17 @@
         {
           "sourceId": "E02",
           "title": "03_02 Bank Export August.csv",
-          "locator": "Loans page 1 owner-card evidence",
+          "locator": "OPEN through OWNERCARD transaction rows",
           "reliability": "high"
         },
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Pages 1-2: loan bridge, owner payments and counsel letter",
+          "locator": "Loans page 1 owner-card evidence",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Loans page 1 owner-card evidence"
     },
     {
       "id": "D048",
@@ -1683,7 +1732,8 @@
           "locator": "Warehouse page 2 stated consumption",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Warehouse page 2 stated consumption"
     },
     {
       "id": "D049",
@@ -1716,7 +1766,8 @@
           "locator": "Payroll row Event delivery staff",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Payroll row Event delivery staff"
     },
     {
       "id": "D050",
@@ -1875,7 +1926,8 @@
           "locator": "Assets row Period depreciation",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Assets row Period depreciation"
     },
     {
       "id": "D057",
@@ -1906,16 +1958,17 @@
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Contracts page 2 R-17; Later evidence page 1",
+          "locator": "Contracts page 2 R-17",
           "reliability": "high"
         },
         {
           "sourceId": "E11",
           "title": "03_11 Evidence Received After Takeover.pdf",
-          "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
+          "locator": "Later evidence page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Contracts page 2 R-17; Later evidence page 1"
     },
     {
       "id": "D058",
@@ -1946,16 +1999,17 @@
         {
           "sourceId": "E05",
           "title": "03_05 Warehouse Count Marta Notes.pdf",
-          "locator": "Warehouse pages 1-2 and Later evidence page 1",
+          "locator": "Warehouse pages 1-2",
           "reliability": "high"
         },
         {
           "sourceId": "E11",
           "title": "03_11 Evidence Received After Takeover.pdf",
-          "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
+          "locator": "Later evidence page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Warehouse pages 1-2 and Later evidence page 1"
     },
     {
       "id": "D059",
@@ -1986,16 +2040,17 @@
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Loans page 2 counsel letter and Later evidence page 1",
+          "locator": "Loans page 2 counsel letter",
           "reliability": "high"
         },
         {
           "sourceId": "E11",
           "title": "03_11 Evidence Received After Takeover.pdf",
-          "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
+          "locator": "Later evidence page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Loans page 2 counsel letter and Later evidence page 1"
     },
     {
       "id": "D060",
@@ -2140,7 +2195,8 @@
           "locator": "Customer rows C-001 through FUT-02",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Contracts page 1 INV-26012"
     },
     {
       "id": "D065",
@@ -2180,7 +2236,8 @@
           "locator": "Customer rows C-001 through FUT-02",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Contracts page 1 INV-26031"
     },
     {
       "id": "D066",
@@ -2220,7 +2277,8 @@
           "locator": "Customer rows C-001 through FUT-02",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Contracts page 1 INV-26047"
     },
     {
       "id": "D067",
@@ -2260,7 +2318,8 @@
           "locator": "Customer rows C-001 through FUT-02",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Contracts page 1 INV-26063"
     },
     {
       "id": "D068",
@@ -2307,7 +2366,8 @@
           "locator": "OPEN through OWNERCARD transaction rows",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Contracts page 2 NB-SEP and FF-SEP"
     },
     {
       "id": "D069",
@@ -2401,16 +2461,17 @@
         {
           "sourceId": "E04",
           "title": "03_04 Contracts Returns and Angry Customers.pdf",
-          "locator": "Contracts page 2 R-17; Later evidence page 1",
+          "locator": "Contracts page 2 R-17",
           "reliability": "high"
         },
         {
           "sourceId": "E11",
           "title": "03_11 Evidence Received After Takeover.pdf",
-          "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
+          "locator": "Later evidence page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Contracts page 2 R-17; Later evidence page 1"
     },
     {
       "id": "D072",
@@ -2441,16 +2502,17 @@
         {
           "sourceId": "E05",
           "title": "03_05 Warehouse Count Marta Notes.pdf",
-          "locator": "Warehouse pages 1-2; Later evidence page 1",
+          "locator": "Warehouse pages 1-2",
           "reliability": "high"
         },
         {
           "sourceId": "E11",
           "title": "03_11 Evidence Received After Takeover.pdf",
-          "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
+          "locator": "Later evidence page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Warehouse pages 1-2; Later evidence page 1"
     },
     {
       "id": "D073",
@@ -2481,16 +2543,17 @@
         {
           "sourceId": "E09",
           "title": "03_09 Loans Owner Card and Legal Problems.pdf",
-          "locator": "Loans page 2; Later evidence page 1",
+          "locator": "Loans page 2",
           "reliability": "high"
         },
         {
           "sourceId": "E11",
           "title": "03_11 Evidence Received After Takeover.pdf",
-          "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
+          "locator": "Later evidence page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Loans page 2; Later evidence page 1"
     },
     {
       "id": "D074",
@@ -2523,7 +2586,8 @@
           "locator": "Assets row Period depreciation",
           "reliability": "medium"
         }
-      ]
+      ],
+      "evidenceSummary": "Assets row Period depreciation"
     },
     {
       "id": "D075",
@@ -2554,16 +2618,17 @@
         {
           "sourceId": "E05",
           "title": "03_05 Warehouse Count Marta Notes.pdf",
-          "locator": "Warehouse pages 1-2; Purchases page 1",
+          "locator": "Warehouse pages 1-2",
           "reliability": "high"
         },
         {
           "sourceId": "E06",
           "title": "03_06 Purchases Invoices and Goods Received.pdf",
-          "locator": "Pages 1-2: supplier table and equipment/repair invoices",
+          "locator": "Purchases page 1",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Warehouse pages 1-2; Purchases page 1"
     },
     {
       "id": "D076",
@@ -3057,7 +3122,7 @@
         {
           "sourceId": "E00",
           "title": "00 BOARD ORDER READ FIRST.pdf",
-          "locator": "Board order page 1; corrected statements and reconciliations",
+          "locator": "Board order page 1",
           "reliability": "high"
         },
         {
@@ -3072,7 +3137,8 @@
           "locator": "Page 1: liquidator, counsel, stock and bank confirmations",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Board order page 1; corrected statements and reconciliations"
     },
     {
       "id": "D092",
@@ -3350,7 +3416,8 @@
           "locator": "Page 1: reporting date, EUR basis and evidence hierarchy",
           "reliability": "high"
         }
-      ]
+      ],
+      "evidenceSummary": "Management P&L rows 2-9 compared with corrected statements"
     }
   ],
   "schedules": {
